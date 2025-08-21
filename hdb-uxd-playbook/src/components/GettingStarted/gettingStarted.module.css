@@ -1,0 +1,47 @@
+.introText {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+}
+.title {
+  color: #fff;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  border-radius: 8px;
+  border: 1px solid #444950;
+  margin: 0 24px;
+}
+
+.blockTitle {
+  padding: 12px 13px;
+  background: #58c4dc;
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  color: #1b1b1d;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.blockDescription {
+  padding: 17px;
+  color: #e3e3e3;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+}

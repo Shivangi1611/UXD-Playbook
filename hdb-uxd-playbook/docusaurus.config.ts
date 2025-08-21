@@ -8,7 +8,6 @@ const config: Config = {
   title: "HDB UXD Playbook",
   tagline: "Dinosaurs are cool",
   favicon: "icons/logo.ico",
-
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
@@ -35,6 +34,8 @@ const config: Config = {
     defaultLocale: "en",
     locales: ["en"],
   },
+
+  plugins: ["docusaurus-plugin-sass"],
 
   presets: [
     [
@@ -63,7 +64,12 @@ const config: Config = {
           onUntruncatedBlogPosts: "warn",
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: [
+            require.resolve("./src/css/customTheme.scss"),
+            require.resolve("./src/css/index.scss"),
+            require.resolve("./src/css/showcase.scss"),
+            require.resolve("./src/css/versions.scss"),
+          ],
         },
       } satisfies Preset.Options,
     ],
@@ -199,6 +205,12 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+    },
+    algolia: {
+      appId: "00173FRNAO",
+      apiKey: "1073ddd55b9f86b39183f9301b6a6ade",
+      indexName: "hdb-uxd-playbook",
+      contextualSearch: true,
     },
   } satisfies Preset.ThemeConfig,
 };
